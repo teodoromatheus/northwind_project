@@ -1,15 +1,13 @@
-Welcome to your new dbt project!
+Bem vindo ao meu primeiro projeto usando DBT
 
-### Using the starter project
+### Descrição do Projeto
 
-Try running the following commands:
-- dbt run
-- dbt test
+O principal objetivo do projeto de portfólio é entender a estrutura do DBT e realizar a modelagem dimensional
+de uma base de dados (northwind), simulando um banco de dados relacional, carregando o Data Mart no Google Bigquery.
 
+### Conceitos e Softwares
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- DBT
+- Modelagem Dimensional (Star-Schema)
+- Datawarehouse (BigQuery)
+- ETL (Transformação sendo realizada com o DBT)
