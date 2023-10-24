@@ -1,4 +1,4 @@
-Bem vindo ao meu primeiro projeto usando DBT
+Bem vindo ao meu primeiro projeto usando DBT.
 
 ### Descrição do Projeto
 

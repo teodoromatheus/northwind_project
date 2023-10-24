@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: northwind_etl
+    description: Base de dados brutos armazenados no BigQuery (Raw Data)
+    tables:
+      - name: orders
+        description: tabela de pedidos
+        columns:
+          - name: order_id
+            description: Chave primária da table orders
+            tests:
+              - unique
+              - not_null
+      - name: products
+        description: Tabela de produtos
+      - name: shippers
+        description: Tabela de entregadores terceiros
+      - name: employees
+        description: Tabela de funcionários
+      - name: customers
+        description: Tabela de clientes
+      - name: suppliers
+        description: Tabela de fornecedores
