@@ -4,6 +4,7 @@ sources:
   - name: northwind_etl
     description: Base de dados brutos armazenados no BigQuery (Raw Data)
     tables:
+
       - name: orders
         description: tabela de pedidos
         columns:
@@ -12,13 +13,69 @@ sources:
             tests:
               - unique
               - not_null
+      
+      - name: order_details
+        description: Tabela que relaciona pedido com os produtos comprados naquele pedido
+        columns:
+          - name: order_id
+            description: Chave estrangeira de tabela de pedidos
+            tests:
+              - not null
+          - name: product_id
+            description: Chave estrangeira da tabela de produtos
+            tests:
+              - not null
+
       - name: products
         description: Tabela de produtos
-      - name: shippers
-        description: Tabela de entregadores terceiros
-      - name: employees
-        description: Tabela de funcionários
-      - name: customers
-        description: Tabela de clientes
+        columns:
+          - name: product_id
+            description: Chave primária da tabela produtos
+            tests:
+              - unique
+              - not null
+      
+      - name: categories
+        description: Tabela de categorias dos produtos
+        columns:
+          - name: category_id
+            description: Chave primária da tabela categorias
+            tests:
+              - unique
+              - not null
+      
       - name: suppliers
         description: Tabela de fornecedores
+        columns:
+          - name: supplier_id
+            description: Chave primária da tabela de fornecedores
+            tests:
+              - unique
+              - not null
+
+      - name: shippers
+        description: Tabela de entregadores terceiros
+        columns:
+          - name: shipper_id
+            description: Chave primária da tabela de entregadores
+            tests:
+              - unique
+              - not null
+
+      - name: employees
+        description: Tabela de funcionários
+        columns:
+          - name: employee_id
+            description: Chave primária da tabela de funcionários
+            tests:
+              - unique
+              - not null
+
+      - name: customers
+        description: Tabela de clientes
+        columns:
+          - name: customer_id
+            description: Chave primária da tabela de clientes
+            tests:
+              - unique
+              - not null
