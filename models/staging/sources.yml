@@ -20,11 +20,11 @@ sources:
           - name: order_id
             description: Chave estrangeira de tabela de pedidos
             tests:
-              - not null
+              - not_null
           - name: product_id
             description: Chave estrangeira da tabela de produtos
             tests:
-              - not null
+              - not_null
 
       - name: products
         description: Tabela de produtos
@@ -33,7 +33,7 @@ sources:
             description: Chave primária da tabela produtos
             tests:
               - unique
-              - not null
+              - not_null
       
       - name: categories
         description: Tabela de categorias dos produtos
@@ -42,7 +42,7 @@ sources:
             description: Chave primária da tabela categorias
             tests:
               - unique
-              - not null
+              - not_null
       
       - name: suppliers
         description: Tabela de fornecedores
@@ -51,7 +51,7 @@ sources:
             description: Chave primária da tabela de fornecedores
             tests:
               - unique
-              - not null
+              - not_null
 
       - name: shippers
         description: Tabela de entregadores terceiros
@@ -60,7 +60,7 @@ sources:
             description: Chave primária da tabela de entregadores
             tests:
               - unique
-              - not null
+              - not_null
 
       - name: employees
         description: Tabela de funcionários
@@ -69,7 +69,7 @@ sources:
             description: Chave primária da tabela de funcionários
             tests:
               - unique
-              - not null
+              - not_null
 
       - name: customers
         description: Tabela de clientes
@@ -78,4 +78,4 @@ sources:
             description: Chave primária da tabela de clientes
             tests:
               - unique
-              - not null
+              - not_null
