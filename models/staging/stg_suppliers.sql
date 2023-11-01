@@ -4,18 +4,18 @@ with
         /*Chave primária*/
         supplier_id
         /*Informações dos fornecedores*/
-        , company_name
-        , address
-        , country						
-        , city				
-        , region					
-        , postal_code						
-        , homepage				
+        , company_name as supplier_company_name
+        , address as supplier_address
+        , country as supplier_country
+        , city as supplier_city	
+        , region as supplier_region	
+        , postal_code as supplier_postal_code						
+        , homepage as supplier_homepage			
         /*Informações de contato do fornecedor*/											
-        , contact_name
-        , contact_title					
-        , phone
-        , fax							
+        , contact_name as supplier_contact_name
+        , contact_title	as supplier_contact_title				
+        , phone as supplier_phone
+        , fax as supplier_fax		
         /*Colunas do Stitch*/
         , _sdc_received_at
         , _sdc_sequence
