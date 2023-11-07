@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    columns:
+      - name: order_id
+        description: Chave primária de "orders"
+        tests:
+          - not_null
+
+      - name: product_fk
+        description: Chave Surrogate estrangeira da dimensão produtos
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk
+      
+      - name: employee_fk
+        description: Chave Surrogate estrangeira da dimensão funcionários
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_employees')
+              field: employee_sk
+      
+      - name: customer_fk
+        description: Chave Surrogate estrangeira da dimensão clientes
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
+      
+      - name: shipper_fk
+        description: Chave Surrogate estrangeira da dimensão expedidores
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_shippers')
+              field: shipper_sk

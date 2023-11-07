@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_employees
+    columns:
+      - name: employee_sk
+        description: Surrogate Key da dimensão funcionários
+        tests:
+          - unique
+          - not_null
