@@ -6,7 +6,7 @@ with
         , product_id
         /*Informações da compra*/
         , quantity
-        , unit_price
+        , unit_price as unit_price_sale
         , discount					
         /*Colunas do Stitch*/
         , _sdc_table_version			

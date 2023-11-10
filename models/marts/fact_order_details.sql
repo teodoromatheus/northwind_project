@@ -44,8 +44,9 @@ with
         , o.employee_fk
         , o.shipper_fk
         , od.quantity
-        , od.unit_price
+        , od.unit_price_sale
         , od.discount
+        , ROUND((od.quantity*od.unit_price_sale*(1-od.discount)),2) as total_price
         , o.order_date
         , o.required_date
         , o.shipped_date
