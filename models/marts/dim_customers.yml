@@ -8,3 +8,8 @@ models:
         tests:
           - unique
           - not_null
+      
+      - name: division
+        description: Regra de negócio do seed_division
+        tests:
+          - not_null

@@ -16,3 +16,7 @@ models:
         description: Chave primária da tabela de categorias
         tests:
           - not_null
+      - name: division
+        description: Regra de Negócio do seed_divisions
+        tests:
+          - not_null
