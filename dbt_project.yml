@@ -34,7 +34,7 @@ models:
   northwind_project:
     # Config indicated by + and applies to all files under models/example/
     marts:
-      +materialized: view
+      +materialized: table
 
     staging:
       +materialized: ephemeral
