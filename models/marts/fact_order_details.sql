@@ -22,6 +22,7 @@ with
         , e.employee_sk as employee_fk
         , s.shipper_sk as shipper_fk
         , o.order_date
+        , cast( {{ dbt.date_trunc('month', 'order_date') }} as date) as year_month_order
         , o.required_date
         , o.shipped_date
         , o.ship_address
@@ -48,6 +49,7 @@ with
         , od.discount
         , ROUND((od.quantity*od.unit_price_sale*(1-od.discount)),2) as total_price
         , o.order_date
+        , dense_rank() over (partition by o.year_month_order order by o.order_date) as day_in_month
         , o.required_date
         , o.shipped_date
         , o.ship_address
